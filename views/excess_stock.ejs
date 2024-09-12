@@ -1,0 +1,41 @@
+<%- include('header.ejs',{title: "Stock", css: "stock", status: "Logout"}) %>
+
+<body>
+<div>
+  <button><a class="poppins-regular create-acct-anchor" href="/user-stock">Update your own stock</a></button>
+</div>
+<% for (blood_bank of data){ %>
+<div class="bank-data">
+        <h1><%= blood_bank.name %><br><%= blood_bank.contact %></h1>
+        <div id="dataRowsContainer">
+            <table id="dataTable" class="data-table">
+              <tr>
+                <th>S No.</th>
+                <th>Blood Group</th>
+                <th>Quantity</th>
+                <th>Date of Collection</th>
+                <th>Volume</th>
+                <th>Bag Type</th>
+                <th>Expiry Date</th>
+              </tr>
+              <% let num = 1; %>
+              <% for (let item of blood_bank.stock) {%>
+                <tr>
+                  <td><%= num %></td>
+                  <td><%= item.blood_group %></td>
+                  <td><%= item.quantity %></td>
+                  <td><%= item.collection_date.substring(0, 10) %></td>
+                  <td><%= item.volume %>ml</td>
+                  <td><%= item.bag_type %></td>
+                  <td><%= item.expiry_date.substring(0, 10) %></td>
+                </tr>
+                <% num += 1; %>
+                <% } %>
+            </table>
+          </div>
+
+</div>
+<% } %>
+  
+</body>
+</html>

@@ -1,0 +1,17 @@
+<% if(auth) {%>
+    <%- include('header.ejs',{title: "Blood Harbour", css: "home", status: "Logout"}) %>
+    <% }else{ %>
+        <%- include('header.ejs',{title: "Blood Harbour", css: "home", status: "Login"}) %>
+<% } %>
+
+<body>
+    <h1 class="poppins-bold">
+        OOPS!<br>
+        THE RESOURCE YOU ARE LOOKING FOR DOES NOT EXIST
+    </h1>
+
+    <div class="footer">
+        <p>copyright @BloodHarbour</p>
+    </div>
+</body>
+

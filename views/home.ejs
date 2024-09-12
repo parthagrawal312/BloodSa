@@ -1,0 +1,55 @@
+<% if(auth) {%>
+    <%- include('header.ejs',{title: "Blood Harbour", css: "home", status: "Logout"}) %>
+    <% }else{ %>
+        <%- include('header.ejs',{title: "Blood Harbour", css: "home", status: "Login"}) %>
+<% } %>
+<body>
+
+
+
+<div class="item-div">
+    <h2 class = "poppins-bold" >Mission</h2>
+    <p class = "content-div poppins-regular">
+        Blood Harbour is dedicated to ensuring a safe and reliable supply of blood products to meet the critical needs of hospitals and patients in our community. 
+        Through partnerships with blood donors, healthcare providers, and community organizations, we strive to save lives and empower healthcare professionals to
+        deliver life-saving treatments.In a world where every drop is invaluable, we are the lifeline, a collective commitment echoing through communities, eradicating 
+        the isolation of insufficient blood supply. Beyond a platform, Blood Harbour resonates as a shared heartbeat, bridging hearts and addressing shortages 
+        collaboratively.
+    </p>
+</div>
+
+
+<div class="item-div">
+    <h2 class = "poppins-bold" >Services</h2>
+    <p class = "content-div poppins-regular">
+        Blood donation:  Blood Harbour operates blood donation centers and organizes mobile drives throughout the community, providing a convenient 
+        and welcoming environment for individuals to donate blood.<br>
+        Blood processing and storage:  Our state-of-the-art blood processing and storage facilities ensure the safety and quality of blood products 
+        through rigorous testing and stringent protocols.<br>
+        Blood distribution:  Blood Harbour efficiently distributes blood products to hospitals and other healthcare providers, ensuring timely access 
+        to these critical supplies.<br>
+        Patient support:  We offer educational resources and support services to patients and their families, helping them understand the importance 
+        of blood donation and navigate the complexities of blood transfusions.
+    </p>
+</div>
+
+<div class="item-div">
+    <h2 class = "poppins-bold" >Why Choose Blood Harbour?</h2>
+    <p class = "content-div poppins-regular">
+        Commitment to safety: We prioritize the safety of blood products and the well-being of blood donors and patients.
+        Foc class = "poppins-bold" us on quality: We adhere to the highest quality standards in blood collection, processing, and storage.
+        Transparency and trust: We are committed to transparency in our operations and strive to build trust with our stakeholders.
+        Community-focused: We are dedicated to serving our community and making a positive impact on the lives of others.
+    </p>
+</div>
+        
+
+<div class="item-div">
+    <h2 class = "poppins-bold" >Contact Us</h2>
+    <p class = "content-div poppins-regular">
+        Website: www.bloodharbour.com <br>
+        Phone: 9810XXXXXX <br>
+        Email: support@bloodharbour.com <br>
+    </p>
+</div>
+</body>

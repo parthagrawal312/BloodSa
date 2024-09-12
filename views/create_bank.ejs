@@ -1,0 +1,18 @@
+<%- include('header.ejs',{title: "Register Blood Center", css: "login", status: "Login"}) %>
+<body>
+    <div>
+        <% if(locals.message) {%>
+            <h3><%= message %></h3>
+        <% } %>
+    </div>
+    <div>
+        <form method="post" action="/register">
+            <label for="name">Blood Center Name:</label>
+            <input type="text" name="name" required>
+            <label for="contact">Contact Number:</label>
+            <input type="text" name="contact" required>
+            <button class="full-width" type="submit">Submit</button>
+            </button>
+        </form>
+    </div>
+</body>

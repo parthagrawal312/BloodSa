@@ -1,0 +1,26 @@
+<%- include('header.ejs',{title: "Create Account", css: "login", status: "Login"}) %>
+<body>
+    <div>
+        <% if(locals.error) {%>
+            <h3><%= error %></h3>
+        <% } %>
+    </div>
+    <div>
+        <form method="post" action="/create">
+            <label for="username">Username:</label>
+            <input type="text" name="username" value="" required>
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+            <label for="re-password">Re-enter Password:</label>
+            <input type="password" id="re_password" name="re_password" required>
+            <label for="bank_id">Blood Bank:</label>
+            <select id="bank_id" name="bank_id" >
+                <% for(bank of banks) {%>
+                <option value="<%= bank.id %>"><%= bank.name %></option>
+                <% } %>
+              </select>
+            <button class="full-width" type="submit">Submit</button>
+            </button>
+        </form>
+    </div>
+</body>

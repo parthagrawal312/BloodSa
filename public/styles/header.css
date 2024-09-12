@@ -1,0 +1,79 @@
+body{
+    background-color: #DCD6F7;
+    color: #112D4E;
+    text-align: center;
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 1.2rem;
+}
+
+ul{
+    list-style: none;
+}
+
+a{
+    color: white;
+    text-decoration: none;
+}
+
+.blog-title{
+    font-size: 2rem;
+}
+
+.title-heading{
+    margin: 3rem 10rem 2rem;
+}
+
+.main-title{
+    font-size: 10rem;
+    font-weight: 700;
+}
+
+.custom-nav {
+    background-color: #A6B1E1;
+}
+
+.custom-navbar-brand{
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+.custom-nav-items-div{
+    position: absolute;
+    right: 3rem;
+}
+
+.custom-nav-items{
+    margin: 0 0.5rem;
+}
+
+.footer{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+.logo-img{
+    height: 4rem;
+}
+
+.poppins-regular {
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.poppins-bold {
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.poppins-regular-italic {
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: italic;
+}
+
+.create-acct-anchor{
+    color: #112D4E;
+}

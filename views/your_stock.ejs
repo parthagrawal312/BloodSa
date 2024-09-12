@@ -1,0 +1,84 @@
+<%- include('header.ejs',{title: "Your Stock", css: "excess", status: "Logout"}) %>
+
+<body>
+<div>
+  <div id="dataRowsContainer">
+    <table id="dataTable" class="data-table">
+      <tr>
+        <th>S No.</th>
+        <th>Blood Group</th>
+        <th>Quantity</th>
+        <th>Date of Collection</th>
+        <th>Volume</th>
+        <th>Bag Type</th>
+        <th>Expiry Date</th>
+        <th>Delete</th>
+      </tr>
+      <% let num = 1; %>
+      <% for (let item of stock) {%>
+        <tr>
+          <td><%= num %></td>
+          <td><%= item.blood_group %></td>
+          <td><%= item.quantity %></td>
+          <td><%= item.collection_date.substring(0, 10) %></td>
+          <td><%= item.volume %>ml</td>
+          <td><%= item.bag_type %></td>
+          <td><%= item.expiry_date.substring(0, 10) %></td>
+          <td><a href="/delete/<%= item.id %>">❌</a></td>
+        </tr>
+        <% num += 1; %>
+        <% } %>
+    </table>  
+  </div>
+
+
+</div>
+    
+<div>
+  <h1>
+    Add more stock
+  </h1>
+</div>
+
+<div class="container">
+<section class="form-section">
+  <form method="post" action="/user-stock">
+    <label for="blood_group">Blood Group:</label>
+    <select id="blood_group" name="blood_group">
+      <option value="A+">A+</option>
+      <option value="B+">B+</option>
+      <option value="A-">A-</option>
+      <option value="B-">B-</option>
+      <option value="O+">O+</option>
+      <option value="O-">O-</option>
+      <option value="AB+">AB+</option>
+      <option value="AB-">AB-</option>
+    </select>
+
+    <label for="quantity">Quantity:</label>
+    <input type="number" id="quantity" name="quantity" required>
+
+    <label for="collection_date">Date of Collection:</label>
+    <input type="date" id="collection_date" name="collection_date" placeholder="dd/mm/yyyy" required>
+
+    <label for="volume">Volume:</label>
+    <select id="volume" name="volume" required>
+      <option value=350>350ml</option>
+      <option value=450>450ml</option>
+    </select>
+
+    <label for="bag_type">Bag Type:</label>
+    <select id="bag_type" name="bag_type" required>
+      <option value="WITH SAGM">WITH SAGM</option>
+      <option value="WITHOUT SAGM">WITHOUT SAGM</option>
+    </select>
+
+    <label for="expiry_date">Expiry Date:</label>
+    <input type="date" id="expiry_date" name="expiry_date" placeholder="dd/mm/yyyy" required>
+
+    <button type="submit">Submit</button>
+  </form>
+</section>
+</div>
+</body>
+</html>

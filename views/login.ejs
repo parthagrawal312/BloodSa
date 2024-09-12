@@ -1,0 +1,37 @@
+<%- include('header.ejs',{title: "Login", css: "login", status: "Login"}) %>
+<body>
+    <div>
+        <% if(locals.message) {%>
+            <h3><%= message %></h3>
+        <% } %>
+
+    </div>
+    <div>
+        <form method="post" action="/login">
+            <label for="username">Username:</label>
+            <input type="text" name="username" value="" required>
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+            <button class="full-width" type="submit">Login</button>
+            </button>
+        </form>
+    </div>
+
+    <div>
+        <h3>
+            <a class="poppins-regular create-acct-anchor button-like" href="/create">Create a new account</a>
+
+            <style>
+            .button-like {
+                /* Add button styles here */
+                display: inline-block;
+                padding: 8px 16px;
+                background-color: #f0f0f0; /* Example background color */
+                border: 1px solid #cccccc;  /* Example border */
+                border-radius: 4px;
+                cursor: pointer; /* Indicate clickable behavior */
+            }
+            </style>
+        </h3>
+    </div>
+</body>
